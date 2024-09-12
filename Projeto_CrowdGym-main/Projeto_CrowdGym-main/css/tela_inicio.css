@@ -1,0 +1,81 @@
+body{
+    /*faz os conteudos ficarem centralizados no meio da tela*/
+    display: flex;
+    justify-content: center;
+    
+   }
+    .crowd {
+        /*faz o titulo ficar mais abaixo na tela*/
+        margin-top: 30px;
+    }
+    h1{
+        /*muda o tamanho e estilo do titulo*/
+        font-size: 170px;
+        font-family: monospace;
+    }
+
+    .entrar {
+        /*essa div centraliza os botoes de entrar no meio da tela*/
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        margin-top: 90px;
+    }
+
+    a {
+        /*estiliza os botoes de entrar como aluno/academia*/
+        display: block;
+        width: 400px;
+        height: 80px;
+        line-height: 75px;
+        font-size: 18px;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: #333;
+        border: 2px solid #333;
+        letter-spacing: 2px;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+       
+        
+        
+        
+    }
+    .btentrar1{
+        /*coloca um espaco entre os botoes*/
+        margin-right: 70px;
+    }
+
+
+    a span {
+        /*faz o texto dos botoes ficarem no centro e o z-index faz ele ficar em cima da cor do fundo quando acontecer a transicao*/
+        position: relative;
+        z-index: 2;
+        margin-top: 50px;
+        size: 2rem;
+    }
+
+    a:after {
+        /*muda a cor do botao quando passa o mouse em cima e coloca uma transicao para preencher o botao em um tempo delimitado*/
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #f57419;
+        transition: all .60s;
+    }
+
+    a:hover {
+        /*deixa o texto no botao branco depois da transicao */
+        color: #fff;
+    }
+
+    a:hover:after {
+        /*faz a transicao ocupar todo o espaco do botao*/
+        width: 100%;
+    }
